@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wh7r4bb17.NextcloudHelper", "wh7r4bb17.NextcloudHelper.csproj", "{08BF063E-51E7-4E11-8468-4BDC6EEC57DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08BF063E-51E7-4E11-8468-4BDC6EEC57DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08BF063E-51E7-4E11-8468-4BDC6EEC57DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08BF063E-51E7-4E11-8468-4BDC6EEC57DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08BF063E-51E7-4E11-8468-4BDC6EEC57DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {566F9F4A-DC32-4A7A-AABD-18C1D5D8229F}
+	EndGlobalSection
+EndGlobal
