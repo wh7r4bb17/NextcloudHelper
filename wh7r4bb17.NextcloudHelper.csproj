@@ -13,7 +13,7 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\EvilRabbit.ico</ApplicationIcon>
     <AssemblyTitle>wh7r4bb17.NextcloudHelper</AssemblyTitle>
-    <Description>wh7r4bb17.NextcloudHelper.dll</Description>
+    <Description>A class in C# designed to facilitate the use of Nextcloud.</Description>
     <Company>wh7r4bb17</Company>
     <Product>Library for using Nextcloud</Product>
     <Copyright>Copyright ©  2023</Copyright>
@@ -22,6 +22,15 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <UserSecretsId>6ba251dd-fd71-4f8f-a0f8-83b7abb5107c</UserSecretsId>
     <Authors>wh7r4bb17</Authors>
+    <Title>Nextcloud Helper</Title>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageIcon></PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/wh7r4bb17/NextcloudHelper</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Nextcloud</PackageTags>
+    <PackageLicenseFile>license</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Resources\EvilRabbit.ico" />
@@ -49,5 +58,20 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="license">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Resources\EvilRabbit.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
