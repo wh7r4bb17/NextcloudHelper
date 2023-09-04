@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net48;net481</TargetFrameworks>
     <OutputType>Library</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\Debug\</OutputPath>
+    <OutputPath>E:\Coding\Projects\wh7r4bb17\NextcloudHelper\Debug\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>E:\Coding\Projects\Releases\NextcloudHelper\</OutputPath>
+    <OutputPath>E:\Coding\Projects\wh7r4bb17\NextcloudHelper\Release</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\EvilRabbit.ico</ApplicationIcon>
@@ -17,23 +17,43 @@
     <Company>wh7r4bb17</Company>
     <Product>Library for using Nextcloud</Product>
     <Copyright>Copyright ©  2023</Copyright>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <UserSecretsId>6ba251dd-fd71-4f8f-a0f8-83b7abb5107c</UserSecretsId>
     <Authors>wh7r4bb17</Authors>
     <Title>Nextcloud Helper</Title>
     <PackageProjectUrl></PackageProjectUrl>
-    <PackageIcon></PackageIcon>
+    <PackageIcon>EvilRabbit.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/wh7r4bb17/NextcloudHelper</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Nextcloud</PackageTags>
-    <PackageLicenseFile>license</PackageLicenseFile>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <IncludeSymbols>False</IncludeSymbols>
+    <Version>1.1.0</Version>
+    <PackageReleaseNotes>added .NET Framework 4.8 and 4.8.1</PackageReleaseNotes>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Debug\**" />
+    <EmbeddedResource Remove="Debug\**" />
+    <None Remove="Debug\**" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Resources\EvilRabbit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Debug\netstandard2.0\Resources\EvilRabbit.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
@@ -41,6 +61,7 @@
     <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
     <PackageReference Include="System.Buffers" Version="4.5.1" />
     <PackageReference Include="System.Memory" Version="4.5.5" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
     <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
     <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
     <PackageReference Include="System.Text.Encodings.Web" Version="7.0.0" />
@@ -60,13 +81,15 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Update="license">
+    <None Include="LICENSE.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="README.md">
+    <None Include="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\EvilRabbit.png">
       <Pack>True</Pack>
@@ -74,4 +97,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="call &quot;$(ProjectDir)Resources\Sign.bat&quot;&#xD;&#xA;copy /Y &quot;$(SolutionDir)LICENSE.md&quot; &quot;$(SolutionDir)$(Configuration)\LICENSE.md&quot;" />
+  </Target>
 </Project>
