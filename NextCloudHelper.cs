@@ -45,6 +45,7 @@ namespace wh7r4bb17.NextcloudHelper
 
         #endregion
 
+
         #region Dispose
         public void Dispose()
             {
@@ -214,7 +215,6 @@ namespace wh7r4bb17.NextcloudHelper
             }
 
         #endregion Public Methods
-
         #region Private Methods
 
         HttpRequestMessage GenerateRequestMessage(string HttpMethod, string requestUri, bool AddOcsHeader = false)
