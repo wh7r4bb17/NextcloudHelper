@@ -13,7 +13,7 @@ The following functions are currently implemented:
 The class is based on Nextcloud Version 28 with [OCS API](https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/index.html) and
 [Webdav API]( https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/index.html).
 
-The class is provided in .NET Standard 2.0 and .NET Framework 4.8 / 4.8.1.
+The class is provided in .NET Standard 2.0 and .NET Framework 4.8.
 
 
 # License
