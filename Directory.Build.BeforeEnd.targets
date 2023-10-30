@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	  <Exec Command="&quot;$(Sign)\SignFiles.exe&quot; &quot;$(TargetDir)$(TargetFileName)&quot; $(Cert)" />
+	</Target>
+
+</Project>

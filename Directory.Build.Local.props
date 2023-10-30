@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+	<PropertyGroup>
+		<DoSigning>true</DoSigning>
+		<Cert>wh7r4bb17</Cert>
+	</PropertyGroup>
+
+</Project>

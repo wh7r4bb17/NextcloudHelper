@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<ApplicationIcon>Resources\EvilRabbit.ico</ApplicationIcon>
+		<AssemblyTitle>wh7r4bb17.NextcloudHelper</AssemblyTitle>
+		<Description>A class in C# designed to facilitate the use of Nextcloud.</Description>
+		<Company>wh7r4bb17</Company>
+		<Product>Library for using Nextcloud</Product>
+		<Copyright>Copyright ©  2023</Copyright>
+		<AssemblyVersion>$(Version)</AssemblyVersion>
+		<FileVersion>$(Version)</FileVersion>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<UserSecretsId>6ba251dd-fd71-4f8f-a0f8-83b7abb5107c</UserSecretsId>
+		<Authors>wh7r4bb17</Authors>
+		<Title>Nextcloud Helper</Title>
+		<PackageProjectUrl></PackageProjectUrl>
+		<PackageIcon>EvilRabbit.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/wh7r4bb17/NextcloudHelper</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>Nextcloud</PackageTags>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<IncludeSymbols>False</IncludeSymbols>
+		<Version>1.1.1</Version>
+		<PackageReleaseNotes>removed old Stuff</PackageReleaseNotes>
+		<PackageOutputPath>$(Nuget)</PackageOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="LICENSE.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="Resources\EvilRabbit.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>
