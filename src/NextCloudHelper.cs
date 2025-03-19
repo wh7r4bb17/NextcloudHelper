@@ -197,7 +197,8 @@ namespace wh7r4bb17.NextcloudHelper
             {
             GetShareInfoAsync(nextcloudPath).Wait();
             string _shareID = Get_ShareID(nextcloudPath);
-            if (_shareID != string.Empty) { RemoveShareAsync(_shareID).Wait(); }
+            if (_shareID != string.Empty)
+                { RemoveShareAsync(_shareID).Wait(); }
             }
 
 
@@ -217,10 +218,11 @@ namespace wh7r4bb17.NextcloudHelper
 
         #region Private Methods
 
-        HttpRequestMessage GenerateRequestMessage(string HttpMethod, string requestUri, bool AddOcsHeader = false)
+        static HttpRequestMessage GenerateRequestMessage(string HttpMethod, string requestUri, bool AddOcsHeader = false)
             {
             HttpRequestMessage request = new HttpRequestMessage(new HttpMethod(HttpMethod), new Uri(requestUri));
-            if (AddOcsHeader) { request.Headers.Add("OCS-APIRequest", "true"); }
+            if (AddOcsHeader)
+                { request.Headers.Add("OCS-APIRequest", "true"); }
             return request;
             }
 
@@ -232,7 +234,8 @@ namespace wh7r4bb17.NextcloudHelper
                 XmlNodeList ShareInfos = ShareInfo.SelectSingleNode("/ocs/data/element").ChildNodes;
                 foreach (XmlNode shareInfo in ShareInfos)
                     {
-                    if (shareInfo.Name == propertyName) { value = shareInfo.InnerText; }
+                    if (shareInfo.Name == propertyName)
+                        { value = shareInfo.InnerText; }
                     }
                 }
             catch (Exception)
@@ -249,7 +252,8 @@ namespace wh7r4bb17.NextcloudHelper
                 XmlNodeList UserInfos = UserInformations.SelectSingleNode("/ocs/data").ChildNodes;
                 foreach (XmlNode userInfo in UserInfos)
                     {
-                    if (userInfo.Name == propertyName) { value = userInfo.InnerText; }
+                    if (userInfo.Name == propertyName)
+                        { value = userInfo.InnerText; }
                     }
                 }
             catch (Exception)
@@ -396,7 +400,6 @@ namespace wh7r4bb17.NextcloudHelper
         /// <param name="nextcloud_base_url">Base Url from Nextcloud Instance like 'https://url.to.nextcloudinstance'</param>
         public NextCloudConfig(string nextcloud_base_url) : this(nextcloud_base_url, DEFAULT_WebDav_SUFFIX, DEFAULT_OcsFileSharingApi_SUFFIX, DEFAULT_OcsUserProvisioningApi_SUFFIX, DEFAULT_OcsStatusApi_SUFFIX)
             {
-
             }
 
         private NextCloudConfig(string nextcloud_base_url, string webdavSuffix, string ocsFilesharingSuffix, string ocsUserProvSuffix, string ocsStatusApiSuffix)
