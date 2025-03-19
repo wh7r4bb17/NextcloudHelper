@@ -9,7 +9,7 @@
 		<Description>A class in C# designed to facilitate the use of Nextcloud.</Description>
 		<Company>wh7r4bb17</Company>
 		<Product>Library for using Nextcloud</Product>
-		<Copyright>Copyright ©  2023</Copyright>
+		<Copyright>Copyright © 2025</Copyright>
 		<AssemblyVersion>$(Version)</AssemblyVersion>
 		<FileVersion>$(Version)</FileVersion>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -25,8 +25,8 @@
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<IncludeSymbols>False</IncludeSymbols>
-		<Version>1.1.1</Version>
-		<PackageReleaseNotes>removed old Stuff</PackageReleaseNotes>
+		<Version>1.1.2</Version>
+		<PackageReleaseNotes>Update References</PackageReleaseNotes>
 		<PackageOutputPath>$(Nuget)</PackageOutputPath>
 	</PropertyGroup>
 
