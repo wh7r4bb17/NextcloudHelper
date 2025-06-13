@@ -2,7 +2,7 @@
 <Project>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-	  <Exec Command="&quot;$(Sign)\SignFiles.exe&quot; &quot;$(TargetDir)$(TargetFileName)&quot; $(Cert)" />
+		<Exec Condition="'$(Configuration)' == 'Release' And Exists('$(Sign)\SignFiles.exe')" Command="&quot;$(Sign)\SignFiles.exe&quot; &quot;$(TargetDir)$(TargetFileName)&quot; $(Cert)" />
 	</Target>
 
 </Project>
